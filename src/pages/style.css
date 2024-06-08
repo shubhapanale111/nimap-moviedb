@@ -1,0 +1,97 @@
+.home-container {
+    padding: 30px;
+    padding-top: 40px;
+    background-color: #272b34;
+  }
+  
+  .movie-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px; 
+    justify-items: center;
+  }
+  
+  @media (min-width: 640px) {
+    .movie-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px; 
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .movie-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 50px; 
+    }
+  }
+/* MovieCard.css */
+.movie-card {
+    /* position: relative; */
+    width: 280px;
+    height: 300px;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+    border-radius: 8px;
+    overflow: hidden;
+  
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: 100% 100%; 
+  }
+  
+  .movie-info {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: white;
+  }
+  
+  .movie-card:hover .movie-info {
+    opacity: 1;
+  }
+  
+  .movie-title {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    color: #facc15; /* yellow-200 */
+  }
+  
+  .movie-overview {
+    font-size: 0.875rem; /* 14px */
+    margin: 8px 0;
+    overflow: hidden;
+    height: 64px; /* 4 lines of text */
+  }
+  
+  .movie-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rating-score {
+    margin-right: 8px;
+  }
+  
+  .rating-icon {
+    color: #facc15; /* yellow-200 */
+  }
+    
+  .pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
